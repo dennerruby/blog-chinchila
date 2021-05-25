@@ -7,6 +7,12 @@ ruby '2.6.6'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
+#PostgresSql
+gem 'pg'
+#Devise
+gem 'devise'
+#High-level wrapper for processing images for the web with ImageMagick or libvips.
+gem 'image_processing'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets

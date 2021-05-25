@@ -1,0 +1,26 @@
+</br></br>
+<h1 class="title">Produtos</h1>
+</br>
+ 
+<% @news.each do |new| %>
+  <div class="columns">
+    <div class="column is-four-fifths">
+    <div class="card">
+    <div class="card-image">
+      <figure class="image is-full is-marginless is-3by1">
+        <%= image_tag new.featured_image %>
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <a href="<%= new_path(id: new.id) %>"><p class="title is-4"><%= new.author %></p></a>
+        </div>
+      </div>
+      <p>Autor: <%= new.author %> - <%= new.created_at.strftime("%d/%m/%Y") %></p>
+    </div>
+  </div>
+
+    </div>
+  </div>
+<% end %>

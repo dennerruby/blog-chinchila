@@ -1,0 +1,40 @@
+<nav class="navbar is-success" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="https://i.ibb.co/G0csqMQ/logo-bg-escuro-400.png" width="112" height='28'>
+      </a>
+ 
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+ 
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href='/new_products/new'>
+          + Cadastrar Novo Produto
+        </a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <% unless admin_signed_in? %>
+              <a class="button is-primary" href='/admins/sign_up'>
+                <strong>Cadastre-se</strong>
+              </a>
+              <a class="button is-light" href='/admins/sign_in'>
+                Entrar
+              </a>
+            <% end %>  
+            <% if admin_signed_in? %>
+              <%= link_to "Sair", destroy_admin_session_path, method: :delete, class: 'button is-light'  %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

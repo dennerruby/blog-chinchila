@@ -1,0 +1,34 @@
+</br></br>
+<h1 class="title">Produtos</h1>
+</br>
+ 
+
+<% @new_products.each do |new_product| %>
+  <div class="columns">
+    <div class="column is-four-fifths">
+    <div class="card">
+    <div class="card-image">
+      <figure class="image is-full is-marginless is-4by3">
+        <%= image_tag new_product.featured_image %>
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <a href="<%= new_product_path(id: new_product.id) %>"><p class="title is-4"><%= new_product.author %></p></a>
+        </div>
+      </div>
+      <p>Autor: <%= new_product.author %> - <%= new_product.created_at.strftime("%d/%m/%Y") %></p>
+    </div>
+  </div>
+
+    </div>
+  </div>
+<% end %>
+
+
+
+
+
+
+
